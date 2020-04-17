@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon app.js",
-    "test": "mocha tests"
+    "test": "mocha tests",
+    "coverage": "nyc --reporter=html --reporter=text npm run test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,8 +20,9 @@
     "imgur": "^0.3.1",
     "mocha": "^7.1.0",
     "mocha-eslint": "^6.0.0",
-    "puppeteer": "^2.1.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.1",
+    "puppeteer": "^2.1.1"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
