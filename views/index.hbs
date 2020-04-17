@@ -32,7 +32,7 @@
                     if(movies && movies.length) {
                         movies.forEach(movie => {
                             tbody.append(`<tr>
-                                <td><a href="/movie/${movie.movieId}">${movie.title}</a></td>
+                                <td><a class="click-movie"href="/movie/${movie.movieId}">${movie.title}</a></td>
                                 <td>${movie.genres.map((genre) => `<span class="badge badge-primary">${genre}</span>`)}</td>
                                 <td>${movie.averageRating}</td>
                             </tr>`);

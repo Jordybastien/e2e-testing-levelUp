@@ -1,0 +1,13 @@
+{
+    "defaultCommandTimeout": 10000,
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "env": {
+      "environment": "test"
+    },
+    "fileServerFolder": ".",
+    "fixturesFolder": "./cypress/fixtures",
+    "integrationFolder": "./cypress/integration",
+    "screenshotsFolder": "../../../dist/cypress/apps/web/e2e/screenshots",
+    "chromeWebSecurity": false
+  }
