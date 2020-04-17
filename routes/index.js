@@ -11,4 +11,12 @@ router.get(['/', '/genre/:genre'], function(req, res) {
   });
 });
 
+router.get('/movie/:id', function(req, res) {
+  res.render('movie', {
+    title: 'Movie Details',
+    selectedMovieId : req.params.id,
+    genres: MovieService.getGenres(),
+  });
+});
+
 module.exports = router;

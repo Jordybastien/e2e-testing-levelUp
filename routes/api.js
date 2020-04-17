@@ -19,4 +19,11 @@ router.get('/movies/byGenre/:genre', function (req, res) {
   });
 });
 
+router.get('/movie/:id', (req, res) => {
+  movieService.getMovieDetails(req.params.id, (err, details) => {
+    const data = movieService.formatDate(details);
+    res.json(data);
+  });
+});
+
 module.exports = router;

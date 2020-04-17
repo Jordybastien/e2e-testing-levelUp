@@ -1,14 +1,14 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">{{#if selectedGenre}}{{selectedGenre}}{{else}}All{{/if}} Movies <i data-feather="loader" class="spin hidden" id="spinner"></i></h1>
+    <h1 class="h2">Movie Details</h1>
 </div>
 
 <div class="table-responsive">
     <table class="table table-striped table-sm" id="movie-table">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Genres</th>
-                <th>Average Rating</th>
+                <th>User ID</th>
+                <th>Rating</th>
+                <th>Time</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -16,9 +16,9 @@
 </div>
 
 <script>
-    //get genre from the server-side render
-    let selectedGenre = '{{selectedGenre}}';
-    let url = '/rest/movies/' + (selectedGenre ? `byGenre/${selectedGenre}` : 'all');
+    //get movie details from the server-side render
+    let selectedMovieId = '{{selectedMovieId}}';
+    let url = `/rest/movie/${selectedMovieId}`;
 
     //call REST service and render table
     $(document).ready(function() {
@@ -32,9 +32,9 @@
                     if(movies && movies.length) {
                         movies.forEach(movie => {
                             tbody.append(`<tr>
-                                <td><a href="/movie/${movie.movieId}">${movie.title}</a></td>
-                                <td>${movie.genres.map((genre) => `<span class="badge badge-primary">${genre}</span>`)}</td>
-                                <td>${movie.averageRating}</td>
+                                <td>${movie.userId}</td>
+                                <td>${movie.rating}</td>
+                                <td>${movie.timestamp}</td>
                             </tr>`);
                         });
                     }
