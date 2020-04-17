@@ -2,6 +2,38 @@
 
 Welcome to our code test!
 
+## How to test functionality
+1. Unit testing
+2. E2E End to End testing
+3. User testing
+
+## Set up Project
+#### 1. Clone the repository:
+`git clone https://github.com/codescreen/CodeScreen_2h0jeccf.git`
+
+#### 2. Install all the dependencies necessary on this application
+`npm install`
+
+#### 3. Start the application
+`npm start`
+
+#### 4. Proceed to Testing functionalities
+
+### 1. Unit testing
+#### 1.1 After installing all dependencies
+
+#### 1.2. Run test by running command `npm test`
+
+### 2. E2E End to End testing
+#### 1.1 After installing all dependencies
+
+#### 1.2 Refer to cypress documentation in case of complications `https://docs.cypress.io/guides/guides/command-line.html`
+
+#### 1.3. Start the application because end to end testing needs the server to be running
+`npm start`
+
+#### 1.4. Run test by running command `npm run cy:run`
+
 ## Project Overview
 
 This project is a simple web application showing a list of movies (downloaded from the free [MovieLens](https://grouplens.org/datasets/movielens/) dataset).
