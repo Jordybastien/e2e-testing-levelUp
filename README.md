@@ -24,6 +24,8 @@ Welcome to our code test!
 
 #### 1.2. Run test by running command `npm test`
 
+#### 1.3. To view coverage run command `npm run coverage`
+
 ### 2. E2E End to End testing
 #### 1.1 After installing all dependencies
 
