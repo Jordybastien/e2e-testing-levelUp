@@ -7,18 +7,15 @@ const movieService = new MovieService(path.join(__dirname, '..', 'movies.db'));
 
 router.get('/movies/all', function (req, res) {
   movieService.getAllMovies((err, movies) => {
-    // map function used to split genres into an array
-    const newMovies = movies.map((movie) => {
-      movie.genres = movie.genres.split('|');
-      return movie;
-    });
-    res.json(newMovies);
+    const data = movieService.splitGenres(movies);
+    res.json(data);
   });
 });
 
 router.get('/movies/byGenre/:genre', function (req, res) {
   movieService.getMoviesByGenre(req.params.genre, (err, movies) => {
-    res.json(movies);
+    const data = movieService.splitGenres(movies);
+    res.json(data);
   });
 });
 
